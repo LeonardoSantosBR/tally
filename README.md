@@ -1,4 +1,4 @@
-###  <ins>UI refactor by Claude Code Design</ins>:
+###  <ins>UI design fix by Claude Code Design</ins>:
 <table align="center">
   <tr>
     <td align="center">
@@ -15,6 +15,7 @@
 
 </br>
 
+###  <ins>UI first design by Claude Code Design</ins>:
 <table align="center">
    <td align="center">
       <img width="316" height="680" alt="Image" src="https://github.com/user-attachments/assets/05496874-c2ee-435f-a648-d3ac069e7c53" /><br/>
