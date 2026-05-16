@@ -1,5 +1,8 @@
 <h2>The app for organize your sales</h2>
 
+###  <ins>2026/05/16 · Header and date and amount earned are dynamically saved</ins>:
+<img width="427" height="212" alt="Image" src="https://github.com/user-attachments/assets/5da05f7e-d1ea-461a-b347-c048e5ae0bec" />
+
 ### <ins>The tally identity</ins>:
 <img width="254" height="254" alt="Image" src="https://github.com/user-attachments/assets/bbc8502f-fd69-4609-b99f-3616af231626" />
 <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/16174d08-1ac8-4cfc-8097-5c1b66170e88" />
