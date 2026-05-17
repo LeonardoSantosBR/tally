@@ -22,7 +22,7 @@ export function NewItemBottomSheet({ visible, onClose }: Props) {
   const addMoney = useMoneyEarnedStore((s) => s.addMoney);
 
   const [name, setName] = useState("");
-  const [quantity, setQuantity] = useState("");
+  const [quantity, setQuantity] = useState("0");
   const [price, setPrice] = useState("");
 
   const handleAdd = () => {
@@ -36,14 +36,14 @@ export function NewItemBottomSheet({ visible, onClose }: Props) {
     addMoney(prc * qty);
 
     setName("");
-    setQuantity("");
+    setQuantity("0");
     setPrice("");
     onClose();
   };
 
   const handleClose = () => {
     setName("");
-    setQuantity("");
+    setQuantity("0");
     setPrice("");
     onClose();
   };
@@ -61,7 +61,16 @@ export function NewItemBottomSheet({ visible, onClose }: Props) {
       >
         <Pressable className="flex-1" onPress={handleClose} />
 
-        <View className="bg-white border-slate-300 rounded-t-3xl px-4 pt-5 pb-10">
+        <View
+          className="bg-white border-slate-300 rounded-t-3xl px-4 pt-5 pb-10"
+          style={{
+            shadowColor: "#000",
+            shadowOffset: { width: 0, height: -4 },
+            shadowOpacity: 0.08,
+            shadowRadius: 10,
+            elevation: 12,
+          }}
+        >
           <View className="w-10 h-1 bg-slate-300 rounded-full self-center mb-6" />
 
           <Text className="text-xl font-bold text-slate-800 mb-5">
