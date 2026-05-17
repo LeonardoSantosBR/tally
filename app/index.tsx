@@ -1,21 +1,19 @@
 import { CloseMarketModal, Header, NewItemBottomSheet, ProductCard } from "@/components";
-import { useMoneyEarnedStore } from "@/stores/useMoneyEarnedStore";
 import { useProductsStore } from "@/stores/useProductsStore";
+import { router } from "expo-router";
 import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen(): React.JSX.Element {
   const products = useProductsStore((s) => s.products);
-  const clearProducts = useProductsStore((s) => s.clearProducts);
-  const resetMoneyEarned = useMoneyEarnedStore((s) => s.resetMoneyEarned);
   const [sheetVisible, setSheetVisible] = useState(false);
   const [closeDayVisible, setCloseDayVisible] = useState(false);
+  const noProducts = products.length === 0 ? true : false
 
   const handleCloseDay = () => {
-    clearProducts();
-    resetMoneyEarned();
     setCloseDayVisible(false);
+    router.push("/summary");
   };
 
   return (
@@ -42,10 +40,11 @@ export default function HomeScreen(): React.JSX.Element {
       </ScrollView>
 
       <TouchableOpacity
-        className="border border-slate-300 rounded-2xl py-4 items-center mb-4"
+        className={`bg-black border border-slate-300 rounded-2xl py-4 items-center mb-4 ${noProducts ? "opacity-40" : "opacity-100"}`}
         onPress={() => setCloseDayVisible(true)}
+        disabled={noProducts ? true : false}
       >
-        <Text className="text-slate-800 text-base font-semibold">
+        <Text className="text-white text-base font-semibold">
           Fechar dia
         </Text>
       </TouchableOpacity>
