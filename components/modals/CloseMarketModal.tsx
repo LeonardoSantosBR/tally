@@ -30,7 +30,7 @@ export function CloseMarketModal({ visible, onClose, onConfirm }: Props) {
       onRequestClose={onClose}
     >
       <Pressable
-        className="flex-1 justify-center items-center px-8"
+        className="flex-1 bg-black/40 justify-center items-center px-8"
         onPress={onClose}
       >
         <Pressable

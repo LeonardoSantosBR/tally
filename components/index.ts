@@ -1,5 +1,5 @@
-export * from "./closeMarketModal";
+export * from "./bottomsheets";
 export * from "./header";
-export * from "./newItemBottomSheet";
+export * from "./modals";
 export * from "./productCard";
 
